@@ -1,0 +1,13 @@
+<div class="d-flex flex-column container">
+<h1 class="text-center">Liste des flats</h1>
+
+<ul id="flats" class="text-center">
+  <% @flats.each do |flat| %>
+    <li style="list-style: none">
+      <%= link_to flat.name, flat_path(flat.id) %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to 'Ajouter un flat', new_flat_path, class: "btn btn-primary" %>
+</div>
